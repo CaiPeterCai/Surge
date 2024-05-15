@@ -2,8 +2,11 @@
 #!desc=屏蔽Bilibili搜索
 
 [MITM]
-hostname = %APPEND% *.bilibili.com
+hostname = %APPEND% *.bilibili.com, *.biliapi.net
 
 [Rule]
+DOMAIN-SUFFIX,biligame.com,REJECT
+DOMAIN-SUFFIX,mall.bilibili.com,REJECT
+DOMAIN-SUFFIX,broadcast.chat.bilibili.com,REJECT
 URL-REGEX,^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?.*$,REJECT
 URL-REGEX,^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(interface\.v1\.Search\/DefaultWords|search\.v2\.Search\/SearchEgg)$,REJECT
