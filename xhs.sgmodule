@@ -1,0 +1,13 @@
+#!name=小红书
+#!desc=屏蔽小红书搜索
+
+[MITM]
+hostname = %APPEND% *.xhscdn.com, *.xiaohongshu.com
+
+[Rule]
+URL-REGEX,^https:\/\/sns-img-qc\.xhscdn\.com\/search\/trends\/.*,REJECT
+URL-REGEX,^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/hot_list$,REJECT
+DOMAIN-SUFFIX,as.xiaohongshu.com,REJECT
+DOMAIN-SUFFIX,apm-native.xiaohongshu.com,REJECT
+DOMAIN-SUFFIX,spider-tracker.xiaohongshu.com,REJECT
+DOMAIN-SUFFIX,t2-hb.xiaohongshu.com,REJECT

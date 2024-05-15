@@ -1,0 +1,14 @@
+#!name=拼多多
+#!desc=屏蔽拼多多搜索
+
+[MITM]
+hostname = %APPEND% *.pinduoduo.com
+
+[Rule]
+DOMAIN-SUFFIX,apm-a.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,pds.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,otk.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,xg.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,t-dsp.pinduoduo.com,REJECT
+URL-REGEX,^https?:\/\/pds\.pinduoduo\.com\/api\/jade\/neutrino\/poros\/app_version\/.*,REJECT
+URL-REGEX,^https?:\/\/images\.pinduoduo\.com\/marketing_api\/.*,REJECT

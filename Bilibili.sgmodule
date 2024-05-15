@@ -1,0 +1,9 @@
+#!name=Bilibili
+#!desc=屏蔽Bilibili搜索
+
+[MITM]
+hostname = %APPEND% *.bilibili.com
+
+[Rule]
+URL-REGEX,^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?.*$,REJECT
+URL-REGEX,^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(interface\.v1\.Search\/DefaultWords|search\.v2\.Search\/SearchEgg)$,REJECT

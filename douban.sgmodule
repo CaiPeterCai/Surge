@@ -1,0 +1,11 @@
+#!name=豆瓣
+#!desc=屏蔽豆瓣广告
+
+[MITM]
+hostname = %APPEND% *.douban.com, *.doubanio.com
+
+[Rule]
+DOMAIN-SUFFIX,push.douban.com,REJECT
+DOMAIN-SUFFIX,amonsul.douban.com,REJECT
+URL-REGEX,^https?:\/\/(qnmob[1-9]|img[1-9])\.doubanio\.com\/view\/dale-online\/dale_ad\/.*,REJECT
+URL-REGEX,^https?:\/\/api\.douban\.com\/v2\/app_ads\/.*,REJECT
