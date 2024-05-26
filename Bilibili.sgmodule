@@ -11,5 +11,4 @@ DOMAIN-SUFFIX,broadcast.chat.bilibili.com,REJECT
 URL-REGEX,^https?:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?.*$,REJECT
 URL-REGEX,^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(interface\.v1\.Search\/DefaultWords|search\.v2\.Search\/SearchEgg)$,REJECT
 URL-REGEX,^https?:\/\/(ali-bj-pcdn|hw-sh-pcdn)-\d+\.biliapi\.net\/.*$,REJECT
-
-
+URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report\/.*,REJECT
