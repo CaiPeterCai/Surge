@@ -1,0 +1,5 @@
+#!name=屏蔽Meta系QUIC
+#!desc=不让Meta系走Quic
+
+[Rule]
+AND,((PROTOCOL,UDP), (OR,((DOMAIN-SUFFIX,facebook.com), (DOMAIN-SUFFIX,fbcdn.net), (DOMAIN-SUFFIX,instagram.com), (DOMAIN-SUFFIX,cdninstagram.com)))),REJECT-NO-DROP
